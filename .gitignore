@@ -98,7 +98,7 @@ ipython_config.py
 #   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
 #   commonly ignored for libraries.
-#uv.lock
+uv.lock
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
@@ -186,7 +186,7 @@ cython_debug/
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 #  and can be added to the global gitignore or merged into this file. However, if you prefer, 
 #  you could uncomment the following to ignore the entire vscode folder
-# .vscode/
+.vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -205,3 +205,62 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# LLM Course Specific
+# Model files and checkpoints (too large for git)
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.h5
+*.pb
+*.onnx
+
+# Hugging Face cache
+.cache/
+huggingface/
+transformers_cache/
+
+# Dataset files (often too large)
+*.csv
+*.jsonl
+*.parquet
+*.arrow
+*.feather
+
+# Model outputs and experiments
+outputs/
+results/
+checkpoints/
+runs/
+wandb/
+mlruns/
+
+# Generated texts and predictions
+predictions/
+generated/
+
+# Tokenizer vocabulary files (if auto-downloaded)
+vocab.json
+merges.txt
+tokenizer.json
+tokenizer_config.json
+special_tokens_map.json
+
+# API keys and secrets
+.secrets
+*.key
+*_key.txt
+api_keys.txt
+
+# Large data directories
+data/raw/
+data/processed/
+datasets/
+
+# GPU/CUDA cache
+.nv/
+
+# Claude
+.claude/
